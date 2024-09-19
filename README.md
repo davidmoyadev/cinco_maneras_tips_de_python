@@ -95,7 +95,10 @@ def suma(x,y):
 lambda x,y : x + y
 
 #Para poder utilizarla necesitamos guardarla en una variable.
-suma_dos = lambda x,y : x + y
+suma = lambda x,y : x + y
+
+#Una vez tenemos la función, es posible llamarla como si de una función normal se tratase.
+print(suma(7,7))
 ```
 
 
@@ -155,4 +158,132 @@ list( map(lambda x,y : x*y, a,b) )
 
 ```bash
 [7, 9, 11, 13, 15]
+```
+
+## 6 - Listas
+Una lista es una secuencia de valores. Es un contenedor para almacenar datos arbitrarios de cualquier tipo.
+
+### Cuando las utilizaremos
+Se utilizan cuando necesitas almacenar una colección de elementos en un solo contenedor y acceder a ellos de forma ordenada. Por ejemplo:
+
+```python
+# Almacenar una Secuencia de Elementos Relacionados
+frutas = ["manzana", "plátano", "naranja", "fresa"]
+
+# Acceder a Elementos por Índice
+print(frutas[1])  # Imprime "plátano"
+
+# Colección de Elementos Heterogéneos
+info = ["Javier", 30, True, [1, 2, 3]]
+```
+### Estructura
+Para crear una lista, se utilizan corchetes [] y los elementos se separan por comas ,. Luego se asigna a una variable.
+```python
+# Sintaxis Básica
+mi_lista = [elemento1, elemento2, elemento3, ...]
+```
+### Ejemplos
+```python
+# Ejemplos:
+frutas = ["manzana", "naranja", "plátano", "fresa"]
+numeros = [1, 2, 3, 4, 5]
+mixta = ["hola", 42, True, [1, 2, 3]]  # Lista con diferentes tipos de datos, incluyendo otra lista
+```
+
+Las listas utilizan métodos para su manejo, a continuación os paso unas cuantas:
+```python
+lista = [10, 20, 30]
+lista.append(40)             # Agrega un nuevo elemento al final
+print(lista)                 # [10, 20, 30, 40]
+
+lista.insert(1, 15)          # Inserta 15 en el índice 1
+print(lista)                 # [10, 15, 20, 30, 40]
+
+lista.remove(20)             # Elimina la primera aparición del 20
+print(lista)                 # [10, 15, 30, 40]
+
+elemento = lista.pop()       # Elimina y devuelve el último elemento
+print(elemento)              # 40
+print(lista)                 # [10, 15, 30]
+
+indice = lista.index(15)     # Devuelve el índice del elemento 15
+print(indice)                # 1
+
+conteo = lista.count(10)     # Cuenta las veces que aparece el 10
+print(conteo)                # 1
+
+lista.sort()                 # Ordena la lista
+print(lista)                 # [10, 15, 30]
+
+lista.reverse()              # Invierte el orden de la lista
+print(lista)                 # [30, 15, 10]
+
+copia = lista.copy()         # Crea una copia de la lista
+print(copia)                 # [30, 15, 10]
+
+lista.clear()                # Elimina todos los elementos de la lista
+print(lista)                 # []
+```
+
+Ahora veamos como recorrer una lista con la sentencia "for":
+```python
+for fruta in frutas:
+    print(fruta)
+```
+## 7 - Diccionarios
+Un diccionario es una estructura de datos que almacena pares de clave-valor.
+
+## Cuando los utilizaremos
+Se utilizan cuando necesitas realizar búsquedas rápidas de valores a partir de una clave.
+
+## Estructura
+Un diccionario se define entre llaves {}, donde cada par de clave y valor está separado por dos puntos :. Los pares están separados por comas.
+```python
+mi_diccionario = {
+    "clave1": valor1,
+    "clave2": valor2,
+    "clave3": valor3
+}
+```
+
+## Ejemplos
+```python
+# En este caso, "nombre", "edad", "carrera" y "calificaciones" 
+# son las claves, y "Ana", 25, "Ingeniería" y [8.5, 9.0, 10.0] 
+# son los valores asociados a esas claves.
+
+estudiante = {
+    "nombre": "Ana",
+    "edad": 25,
+    "carrera": "Ingeniería",
+    "calificaciones": [8.5, 9.0, 10.0]
+}
+
+# Acceder a los valores en un diccionario
+print(estudiante["nombre"])  # Imprime "Ana"
+print(estudiante["calificaciones"])  # Imprime [8.5, 9.0, 10.0]
+
+# Modificar valores
+estudiante["edad"] = 26
+print(estudiante["edad"])  # Imprime 26
+
+# Agregar un nuevo par clave-valor
+estudiante["promedio"] = 9.2
+print(estudiante)  # Ahora tiene la clave "promedio"
+
+# Eliminar elementos
+estudiante.pop("calificaciones")  # Elimina "calificaciones"
+del estudiante["edad"]  # Elimina "edad"
+estudiante.clear()  # Vacía el diccionario
+
+# Métodos comunes de los diccionarios
+# Obtener claves, valores y pares
+print(estudiante.keys())  # Devuelve las claves
+print(estudiante.values())  # Devuelve los valores
+print(estudiante.items())  # Devuelve los pares clave-valor
+
+# Actualizar un diccionario
+otro_estudiante = {"nombre": "Carlos", "edad": 22}
+estudiante.update(otro_estudiante)
+print(estudiante)  # Actualiza el diccionario original
 ```
