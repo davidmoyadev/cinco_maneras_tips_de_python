@@ -1,4 +1,4 @@
-# 5 Trucos de python
+# Python
 
 Hoy os quiero presentar 5 maneras de python para programar que quizás sabias pero que nunca te han explicado de una manera que puedas entender. 
 
@@ -43,7 +43,6 @@ return ( 5 * 24)
 En este link podréis ver como se ejecuta este código para poder entenderlo mejor:
 
 [https://pythontutor.com](https://pythontutor.com/visualize.html#code=def%20factorial%28n%29%3A%0A%20%20%20%20%23%20print%28n%29%0A%20%20%20%20if%20n%20%3D%3D%201%3A%0A%20%20%20%20%20%20%20%20return%201%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20return%20n%20*%20factorial%28n-1%29%0A%0Aprint%28factorial%285%29%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
-
 
 
 ## 2 - Operador ternario
@@ -176,7 +175,7 @@ print(frutas[1])  # Imprime "plátano"
 # Colección de Elementos Heterogéneos
 info = ["Javier", 30, True, [1, 2, 3]]
 ```
-### Estructura
+### Estructura:
 Para crear una lista, se utilizan corchetes [] y los elementos se separan por comas ,. Luego se asigna a una variable.
 ```python
 # Sintaxis Básica
@@ -233,10 +232,10 @@ for fruta in frutas:
 ## 7 - Diccionarios
 Un diccionario es una estructura de datos que almacena pares de clave-valor.
 
-## Cuando los utilizaremos
+### Cuando los utilizaremos:
 Se utilizan cuando necesitas realizar búsquedas rápidas de valores a partir de una clave.
 
-## Estructura
+### Estructura
 Un diccionario se define entre llaves {}, donde cada par de clave y valor está separado por dos puntos :. Los pares están separados por comas.
 ```python
 mi_diccionario = {
@@ -246,7 +245,7 @@ mi_diccionario = {
 }
 ```
 
-## Ejemplos
+### Ejemplos
 ```python
 # En este caso, "nombre", "edad", "carrera" y "calificaciones" 
 # son las claves, y "Ana", 25, "Ingeniería" y [8.5, 9.0, 10.0] 
